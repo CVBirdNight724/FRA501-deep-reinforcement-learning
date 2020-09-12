@@ -53,7 +53,7 @@ Env = Environment()
 ag = Agent()
 # epsilon = 0.1
 # c = 0.1
-n = 100000
+n = 10000
 
 if __name__ == "__main__":
     for i in range(1, n+1):
