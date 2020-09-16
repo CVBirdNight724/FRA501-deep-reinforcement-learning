@@ -12,32 +12,35 @@ cnt = 0
 
 observation = env.reset()
 
-#------------------------Running the simulation-------------------------------------
+#------------------------Create the Agent-------------------------------------------
 
-while not done:
+class Agent:
+    def __init__(self):
+        self.policy = [0, 1] # 0 is left ,1 is right
+        self.state = 0
+    
+    def chooseAction(self):
+
+#------------------------Running the simulation-------------------------------------
+state = 0
+# while not done:
+for i in range(1000):
 
     env.render()
     cnt += 1
-    action = env.action_space.sample()
+    #---------------------Perform Action---------------------#
+    # action = env.action_space.sample()
+    if 
+
+    #---------------------Environment---------------------#
     observation, reward, done, _ = env.step(action)
-    print("action: ", action)
-    print("observation: ", observation)
-    print("reward: ", reward)
-    time.sleep(1)
+    x, d_x, q, d_q = observation
 
-env.close()
+    # print("action: ", action)
+    # print("observation: ", observation)
+    # print("reward: ", reward)
 
+    time.sleep(0.3)
 
-# import gym
-# env = gym.make('CartPole-v0')
-# for i_episode in range(20):
-#     observation = env.reset()
-#     for t in range(100):
-#         env.render()
-#         print(observation)
-#         action = env.action_space.sample()
-#         observation, reward, done, info = env.step(action)
-#         if done:
-#             print("Episode finished after {} timesteps".format(t+1))
-#             break
-# env.close()
+env.close
+
