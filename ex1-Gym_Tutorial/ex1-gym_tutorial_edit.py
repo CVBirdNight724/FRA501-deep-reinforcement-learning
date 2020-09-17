@@ -19,28 +19,41 @@ class Agent:
         self.policy = [0, 1] # 0 is left ,1 is right
         self.state = 0
     
-    def chooseAction(self):
+    # def chooseAction(self):
 
 #------------------------Running the simulation-------------------------------------
-state = 0
+"""
+state=0 perform q<0
+state=1 perform q>0
+"""
+
+
 # while not done:
+state = 0
 for i in range(1000):
 
     env.render()
     cnt += 1
     #---------------------Perform Action---------------------#
     # action = env.action_space.sample()
-    if 
-
+    if state == 0:
+        action = 0
+    else:
+        action = 1
     #---------------------Environment---------------------#
     observation, reward, done, _ = env.step(action)
     x, d_x, q, d_q = observation
 
-    # print("action: ", action)
-    # print("observation: ", observation)
-    # print("reward: ", reward)
+    if q > 0 and d_x <= 1:
+        state = 1
+    else:
+        state = 0
+    print("action: ", action)
+    print("observation: ", observation)
+    print("state: ", state)
+    print("reward: ", reward)
 
-    time.sleep(0.3)
+    # time.sleep(0.3)
 
 env.close
 
