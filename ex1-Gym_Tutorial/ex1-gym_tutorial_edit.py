@@ -21,6 +21,13 @@ class Agent:
     
     # def chooseAction(self):
 
+class MDP:  #Markov Decision Process
+    def __inin__(self):
+        
+    def nextState(self, currentState):
+
+    def
+
 #------------------------Running the simulation-------------------------------------
 """
 state=0 perform q<0
