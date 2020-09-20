@@ -49,7 +49,7 @@ for i in range(1000):
         action = 1
     #---------------------Environment---------------------#
     observation, reward, done, _ = env.step(action)
-    x, d_x, q, d_q = observation
+    x, d_x, q, d_q = observation #state
 
     if q > 0 and d_x <= 1:
         state = 1
